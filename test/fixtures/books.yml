@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  autor_name: MyString
+  editor: MyString
+  collection: MyString
+  kind: MyString
+  cote: MyString
+
+two:
+  name: MyString
+  autor_name: MyString
+  editor: MyString
+  collection: MyString
+  kind: MyString
+  cote: MyString

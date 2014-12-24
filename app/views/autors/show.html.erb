@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @autor.name %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @autor.first_name %>
+</p>
+
+<p>
+  <strong>Nationality:</strong>
+  <%= @autor.nationality %>
+</p>
+
+<%= link_to 'Edit', edit_autor_path(@autor) %> |
+<%= link_to 'Back', autors_path %>
