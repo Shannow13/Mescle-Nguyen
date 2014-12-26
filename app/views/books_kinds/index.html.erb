@@ -1,0 +1,27 @@
+<h1>Listing books_kinds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cote books</th>
+      <th>Cote kind</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @books_kinds.each do |books_kind| %>
+      <tr>
+        <td><%= books_kind.cote_books %></td>
+        <td><%= books_kind.cote_kind %></td>
+        <td><%= link_to 'Show', books_kind %></td>
+        <td><%= link_to 'Edit', edit_books_kind_path(books_kind) %></td>
+        <td><%= link_to 'Destroy', books_kind, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Books kind', new_books_kind_path %>

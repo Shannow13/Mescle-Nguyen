@@ -1,6 +1,8 @@
 class Kind < ActiveRecord::Base
 
 	validate :blank
+	has_and_belongs_to_many :books
+	
 	def blank
 		if name.empty?
 		errors.add(:name, 'I\'m sure you know a kind')

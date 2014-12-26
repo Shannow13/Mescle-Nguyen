@@ -1,0 +1,13 @@
+Fri, 26 Dec 2014 10:39:03 +0100
+README.rdoc	Wed, 24 Dec 2014 11:38:18 +0100
+app/controllers/application_controller.rb	Wed, 24 Dec 2014 11:38:18 +0100
+app/controllers/autors_controller.rb	Wed, 24 Dec 2014 11:40:19 +0100
+app/controllers/books_controller.rb	Wed, 24 Dec 2014 11:39:58 +0100
+app/controllers/kinds_controller.rb	Wed, 24 Dec 2014 11:39:42 +0100
+app/helpers/application_helper.rb	Wed, 24 Dec 2014 11:38:18 +0100
+app/helpers/autors_helper.rb	Wed, 24 Dec 2014 11:40:19 +0100
+app/helpers/books_helper.rb	Wed, 24 Dec 2014 11:39:58 +0100
+app/helpers/kinds_helper.rb	Wed, 24 Dec 2014 11:39:43 +0100
+app/models/autor.rb	Wed, 24 Dec 2014 11:49:51 +0100
+app/models/book.rb	Wed, 24 Dec 2014 11:46:06 +0100
+app/models/kind.rb	Wed, 24 Dec 2014 11:45:07 +0100

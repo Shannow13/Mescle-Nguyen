@@ -1,0 +1,10 @@
+class CreateBooksKinds < ActiveRecord::Migration
+  def change
+    create_table :books_kinds do |t|
+      t.string :cote_books
+      t.string :cote_kind
+
+      t.timestamps
+    end
+  end
+end

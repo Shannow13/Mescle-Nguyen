@@ -1,6 +1,7 @@
 class Book < ActiveRecord::Base
 	validate :blank
 	belongs_to :autor
+	has_and_belongs_to_many :kinds
 	def blank
 		if name.empty?
 		errors.add(:name, 'The book with no name exists and it\'s his title')
