@@ -2574,3 +2574,67 @@ Migrating to CreateBooksKinds (20141226095037)
   [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141226095037"]]
   [1m[36m (16.5ms)[0m  [1mCOMMIT[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-27 11:55:18 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.0ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 406ms (Views: 311.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/autors.css?body=1" for 127.0.0.1 at 2014-12-27 11:55:19 +0100
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-12-27 11:55:19 +0100
+
+
+Started GET "/assets/books_kinds.css?body=1" for 127.0.0.1 at 2014-12-27 11:55:19 +0100
+
+
+Started GET "/assets/kinds.css?body=1" for 127.0.0.1 at 2014-12-27 11:55:19 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-27 11:55:19 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-27 11:55:19 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-27 11:55:19 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-27 11:55:19 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-27 11:55:19 +0100
+
+
+Started GET "/assets/autors.js?body=1" for 127.0.0.1 at 2014-12-27 11:55:19 +0100
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-12-27 11:55:19 +0100
+
+
+Started GET "/assets/books_kinds.js?body=1" for 127.0.0.1 at 2014-12-27 11:55:19 +0100
+
+
+Started GET "/assets/kinds.js?body=1" for 127.0.0.1 at 2014-12-27 11:55:19 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-27 11:55:19 +0100
+
+
+Started GET "/autors" for 127.0.0.1 at 2014-12-27 11:55:21 +0100
+Processing by AutorsController#index as HTML
+  [1m[36mAutor Load (1.0ms)[0m  [1mSELECT "autors".* FROM "autors"[0m
+  Rendered autors/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 77ms (Views: 72.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-12-27 11:55:22 +0100
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.8ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 108ms (Views: 106.5ms | ActiveRecord: 0.8ms)
