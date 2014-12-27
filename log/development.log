@@ -2345,3 +2345,232 @@ Processing by KindsController#index as HTML
   [1m[36mKind Load (0.3ms)[0m  [1mSELECT "kinds".* FROM "kinds"[0m
   Rendered kinds/index.html.erb within layouts/application (5.4ms)
 Completed 200 OK in 101ms (Views: 99.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-26 12:35:44 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 161ms (Views: 143.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/autors.css?body=1" for 127.0.0.1 at 2014-12-26 12:35:45 +0100
+
+
+Started GET "/assets/kinds.css?body=1" for 127.0.0.1 at 2014-12-26 12:35:45 +0100
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-12-26 12:35:45 +0100
+
+
+Started GET "/assets/books_kinds.css?body=1" for 127.0.0.1 at 2014-12-26 12:35:45 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-26 12:35:45 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-26 12:35:45 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-26 12:35:45 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-26 12:35:45 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-26 12:35:45 +0100
+
+
+Started GET "/assets/autors.js?body=1" for 127.0.0.1 at 2014-12-26 12:35:45 +0100
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-12-26 12:35:45 +0100
+
+
+Started GET "/assets/books_kinds.js?body=1" for 127.0.0.1 at 2014-12-26 12:35:45 +0100
+
+
+Started GET "/assets/kinds.js?body=1" for 127.0.0.1 at 2014-12-26 12:35:45 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-26 12:35:45 +0100
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-12-26 12:35:51 +0100
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (11.3ms)
+  Rendered books/new.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 115ms (Views: 113.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2014-12-26 12:36:15 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SjBsHsUqcSXI8ufJ2HGM5AxrrXmperuflIL6JTq3Myk=", "book"=>{"name"=>"Toto", "autor_name"=>"tata", "editor"=>"tarte", "collection"=>"Tartare", "kind"=>"Tottenham", "cote"=>"T-001"}, "commit"=>"Create Book"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "books" ("autor_name", "collection", "cote", "created_at", "editor", "kind", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["autor_name", "tata"], ["collection", "Tartare"], ["cote", "T-001"], ["created_at", "2014-12-26 11:36:15.677023"], ["editor", "tarte"], ["kind", "Tottenham"], ["name", "Toto"], ["updated_at", "2014-12-26 11:36:15.677023"]]
+  [1m[36m (184.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/books/10
+Completed 302 Found in 197ms (ActiveRecord: 186.2ms)
+
+
+Started GET "/books/10" for 127.0.0.1 at 2014-12-26 12:36:15 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books"  WHERE "books"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered books/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 68ms (Views: 64.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/autors.css?body=1" for 127.0.0.1 at 2014-12-26 12:36:16 +0100
+
+
+Started GET "/assets/books_kinds.css?body=1" for 127.0.0.1 at 2014-12-26 12:36:16 +0100
+
+
+Started GET "/assets/kinds.css?body=1" for 127.0.0.1 at 2014-12-26 12:36:16 +0100
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-12-26 12:36:16 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-26 12:36:16 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-26 12:36:16 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-26 12:36:16 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-26 12:36:16 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-26 12:36:16 +0100
+
+
+Started GET "/assets/autors.js?body=1" for 127.0.0.1 at 2014-12-26 12:36:16 +0100
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-12-26 12:36:16 +0100
+
+
+Started GET "/assets/books_kinds.js?body=1" for 127.0.0.1 at 2014-12-26 12:36:16 +0100
+
+
+Started GET "/assets/kinds.js?body=1" for 127.0.0.1 at 2014-12-26 12:36:16 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-26 12:36:16 +0100
+
+
+Started GET "/books" for 127.0.0.1 at 2014-12-26 12:36:17 +0100
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 74ms (Views: 72.3ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/books/10" for 127.0.0.1 at 2014-12-26 12:36:22 +0100
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SjBsHsUqcSXI8ufJ2HGM5AxrrXmperuflIL6JTq3Myk=", "id"=>"10"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books"  WHERE "books"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "books_kinds" WHERE "books_kinds"."book_id" = ?  [["book_id", 10]]
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 10]]
+  [1m[35m (117.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/books
+Completed 302 Found in 188ms (ActiveRecord: 118.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-12-26 12:36:22 +0100
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 66ms (Views: 65.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/autors.css?body=1" for 127.0.0.1 at 2014-12-26 12:36:22 +0100
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-12-26 12:36:22 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-26 12:36:22 +0100
+
+
+Started GET "/assets/kinds.css?body=1" for 127.0.0.1 at 2014-12-26 12:36:22 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-26 12:36:22 +0100
+
+
+Started GET "/assets/books_kinds.css?body=1" for 127.0.0.1 at 2014-12-26 12:36:22 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-26 12:36:22 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-26 12:36:22 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-26 12:36:22 +0100
+
+
+Started GET "/assets/autors.js?body=1" for 127.0.0.1 at 2014-12-26 12:36:22 +0100
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-12-26 12:36:22 +0100
+
+
+Started GET "/assets/kinds.js?body=1" for 127.0.0.1 at 2014-12-26 12:36:22 +0100
+
+
+Started GET "/assets/books_kinds.js?body=1" for 127.0.0.1 at 2014-12-26 12:36:22 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-26 12:36:22 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_books_kinds_on_kind_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_books_kinds_on_kind_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_books_kinds_on_book_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_books_kinds_on_book_id' AND type='index'
+
+  [1m[36m (15.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (60.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateKinds (20141224103942)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (78.2ms)[0m  [1mCREATE TABLE "kinds" ("id" serial primary key, "name" character varying(255), "cote" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141224103942"]]
+  [1m[36m (8.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateBooks (20141224103958)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (76.0ms)[0m  [1mCREATE TABLE "books" ("id" serial primary key, "name" character varying(255), "autor_name" character varying(255), "editor" character varying(255), "collection" character varying(255), "kind" character varying(255), "cote" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141224103958"]]
+  [1m[36m (17.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreateAutors (20141224104019)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (76.2ms)[0m  [1mCREATE TABLE "autors" ("id" serial primary key, "name" character varying(255), "first_name" character varying(255), "nationality" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141224104019"]]
+  [1m[36m (17.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreateBooksKinds (20141226095037)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (31.3ms)[0m  [1mCREATE TABLE "books_kinds" ("id" serial primary key, "book_id" integer, "kind_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (42.8ms)[0m  CREATE  INDEX  "index_books_kinds_on_book_id" ON "books_kinds"  ("book_id")
+  [1m[36m (30.7ms)[0m  [1mCREATE  INDEX  "index_books_kinds_on_kind_id" ON "books_kinds"  ("kind_id")[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141226095037"]]
+  [1m[36m (16.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"

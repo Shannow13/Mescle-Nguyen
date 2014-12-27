@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20141226095037) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "autors", force: true do |t|
     t.string   "name"
     t.string   "first_name"
@@ -39,8 +42,8 @@ ActiveRecord::Schema.define(version: 20141226095037) do
     t.datetime "updated_at"
   end
 
-  add_index "books_kinds", ["book_id"], name: "index_books_kinds_on_book_id"
-  add_index "books_kinds", ["kind_id"], name: "index_books_kinds_on_kind_id"
+  add_index "books_kinds", ["book_id"], name: "index_books_kinds_on_book_id", using: :btree
+  add_index "books_kinds", ["kind_id"], name: "index_books_kinds_on_kind_id", using: :btree
 
   create_table "kinds", force: true do |t|
     t.string   "name"
