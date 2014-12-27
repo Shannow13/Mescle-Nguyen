@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   resources :books_kinds
 
   resources :autors
@@ -7,7 +8,8 @@ Rails.application.routes.draw do
 
   resources :kinds
   
-   root :to => 'books#index'
+  devise_for :users
+  root :to => 'books#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
