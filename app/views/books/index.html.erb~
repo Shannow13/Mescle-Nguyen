@@ -1,5 +1,15 @@
 <h1>Listing books</h1>
 
+
+<form>
+      <% form_tag(books_path, :method => "get", id: "search-form") do %>
+	
+	 	
+	<%= text_field_tag :search, params[:search], placeholder: "Search books" %>
+	<%= submit_tag "Search"%>
+<% end %>
+</form>
+
 <table>
   <thead>
     <tr>
@@ -27,13 +37,15 @@
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy, User%></td>
       </tr>
     <% end %>
+
   </tbody>
+  
 </table>
 
 <br>
 <%= link_to 'List of Autors', controller: 'autors' %>
 <%= link_to 'List of Kinds', controller: 'kinds' %>
-<%= link_to 'New Book', new_book_pathif can? :create, User %>
+<%= link_to 'New Book', new_book_path if can? :create, User %>
 
 
 

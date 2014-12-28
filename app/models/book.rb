@@ -2,6 +2,12 @@ class Book < ActiveRecord::Base
 	validate :blank
 	belongs_to :autor
 	has_and_belongs_to_many :kinds
+	
+	#Method for searching in the database
+	def self.search(query)
+		where("name like ?", "%#{query}%")
+	end
+	
 	def blank
 		if name.empty?
 		errors.add(:name, 'The book with no name exists and it\'s his title')
