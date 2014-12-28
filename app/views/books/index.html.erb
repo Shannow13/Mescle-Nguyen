@@ -23,8 +23,8 @@
         <td><%= book.kind %></td>
         <td><%= book.cote %></td>
         <td><%= link_to 'Show', book %></td>
-        <td><%= link_to 'Edit', edit_book_path(book) %></td>
-        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_book_path(book) if can? :update, User%></td>
+        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy, User%></td>
       </tr>
     <% end %>
   </tbody>
@@ -33,7 +33,7 @@
 <br>
 <%= link_to 'List of Autors', controller: 'autors' %>
 <%= link_to 'List of Kinds', controller: 'kinds' %>
-<%= link_to 'New Book', new_book_path %>
+<%= link_to 'New Book', new_book_path if can? :create, User %>
 
 
 

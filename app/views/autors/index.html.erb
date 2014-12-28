@@ -17,8 +17,8 @@
         <td><%= autor.first_name %></td>
         <td><%= autor.nationality %></td>
         <td><%= link_to 'Show', autor %></td>
-        <td><%= link_to 'Edit', edit_autor_path(autor) %></td>
-        <td><%= link_to 'Destroy', autor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_autor_path(autor) if can? :update, User %></td>
+        <td><%= link_to 'Destroy', autor, method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy, User%></td>
       </tr>
     <% end %>
   </tbody>
@@ -27,4 +27,4 @@
 <br>
 <%= link_to 'List of kinds', controller: 'kinds' %>
 <%= link_to 'List of Books', controller: 'books' %>
-<%= link_to 'New Autor', new_autor_path %>
+<%= link_to 'New Autor', new_autor_path if can? :create, User%>

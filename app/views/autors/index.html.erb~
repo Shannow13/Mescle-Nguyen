@@ -17,8 +17,8 @@
         <td><%= autor.first_name %></td>
         <td><%= autor.nationality %></td>
         <td><%= link_to 'Show', autor %></td>
-        <td><%= link_to 'Edit', edit_autor_path(autor) %></td>
-        <td><%= link_to 'Destroy', autor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_autor_path(autor) if can? :update, User %></td>
+        <td><%= link_to 'Destroy', autor, method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy, User%></td>
       </tr>
     <% end %>
   </tbody>
