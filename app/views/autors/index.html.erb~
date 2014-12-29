@@ -1,6 +1,15 @@
 <h1>Listing autors</h1>
 
-<table>
+<form>
+      <% form_tag(books_path, :method => "get", id: "search-form") do %>
+	
+	 	
+	<%= text_field_tag :search, params[:search], placeholder: "Search books" %>
+	<%= submit_tag "Search"%>
+<% end %>
+</form>
+
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -16,15 +25,24 @@
         <td><%= autor.name %></td>
         <td><%= autor.first_name %></td>
         <td><%= autor.nationality %></td>
-        <td><%= link_to 'Show', autor %></td>
-        <td><%= link_to 'Edit', edit_autor_path(autor) if can? :update, User %></td>
-        <td><%= link_to 'Destroy', autor, method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy, User%></td>
+        <td><%= link_to 'Show', autor, class: 'btn btn-default' %></td>
+        <td><%= link_to 'Edit', edit_autor_path(autor), class: 'btn btn-default' if can? :update, User %></td>
+        <td><%= link_to 'Destroy', autor, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default' if can? :destroy, User%></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-<%= link_to 'List of kinds', controller: 'kinds' %>
-<%= link_to 'List of Books', controller: 'books' %>
-<%= link_to 'New Autor', new_autor_path %>
+<%= link_to 'List of kinds', kinds_path, class: 'btn btn-default' %>
+<%= link_to 'List of Books', books_path, class: 'btn btn-default' %>
+<%= link_to 'New Autor', new_autor_path, class: 'btn btn-default' if can? :create, User%>
+<% if user_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_user_session_path, class: 'btn btn-default', :method => :delete) %> 
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Login', new_user_session_path)  %>  
+  </li>   
+  <% end %>

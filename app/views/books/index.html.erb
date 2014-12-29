@@ -3,7 +3,7 @@
 
 
 
-<table>
+<table class="table table-stripped">
   <thead>
     <tr>
       <th>Name</th>
@@ -25,9 +25,9 @@
         <td><%= book.collection %></td>
         <td><%= book.kind %></td>
         <td><%= book.cote %></td>
-        <td><%= link_to 'Show', book %></td>
-        <td><%= link_to 'Edit', edit_book_path(book) if can? :update, User%></td>
-        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy, User%></td>
+        <td><%= link_to 'Show', book ,class: 'btn btn-default' %></td>
+        <td><%= link_to 'Edit', edit_book_path(book), class: 'btn btn-info' if can? :update, User%></td>
+        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' if can? :destroy, User%></td>
       </tr>
     <% end %>
 
@@ -44,15 +44,15 @@
 </form>
 
 <br>
-<%= link_to 'List of Autors', controller: 'autors' %>
-<%= link_to 'List of Kinds', controller: 'kinds' %>
-<%= link_to 'New Book', new_book_path if can? :create, User %>
+<%= link_to 'List of Autors', autors_path, class: 'btn btn-default'%>
+<%= link_to 'List of Kinds', kinds_path, class: 'btn btn-default'%>
+<%= link_to 'New Book', new_book_path, class: 'btn btn-default' if can? :create, User%>
 
 
 
 <% if user_signed_in? %>
   <li>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+  <%= link_to('Logout', destroy_user_session_path, class: 'btn btn-default', :method => :delete)%>        
   </li>
 <% else %>
   <li>
