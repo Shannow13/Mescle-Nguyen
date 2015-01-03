@@ -30,5 +30,5 @@
   <%= @book.cote %>
 </p>
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Edit', edit_book_path(@book), class: 'btn btn-info' if can? :update, User%> |
 <%= link_to 'Back', books_path %>

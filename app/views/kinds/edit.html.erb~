@@ -1,4 +1,4 @@
-<h1>Modification d'un genre</h1>
+<h1>Editing kind</h1>
 
 <%= render 'form' %>
 

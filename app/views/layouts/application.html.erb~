@@ -7,9 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<table class="table">
+<% form_tag(books_path, :method => "get", id: "search-form") do %> 	
+	<%= text_field_tag :search, params[:search], placeholder: "Search books" %>
+	<%= submit_tag "Search", :name => nil%>
+<% end %>
+
+
           <%= yield %>
-          </table>
+        
   
   
 

@@ -1,4 +1,4 @@
-<h1>Modification d'un auteur</h1>
+<h1>Editing autor</h1>
 
 <%= render 'form' %>
 

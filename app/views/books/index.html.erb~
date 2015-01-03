@@ -1,7 +1,9 @@
 <h1>Listing books</h1>
 
-
-
+<% form_tag(books_path, :method => "get", id: "search-form") do %> 	
+	<%= text_field_tag :search, params[:search], placeholder: "Search books" %>
+	<%= submit_tag "Search", :name => nil%>
+<% end %>
 
 <table class="table table-stripped">
   <thead>
@@ -34,19 +36,13 @@
   </tbody>
   
 </table>
-<form>
-      <% form_tag(books_path, :method => "get", id: "search-form") do %>
-	
-	 	
-	<%= text_field_tag :search, params[:search], placeholder: "Search books" %>
-	<%= submit_tag "Search"%>
-<% end %>
-</form>
+
 
 <br>
-<%= link_to 'List of Autors', autors_path, class: 'btn btn-default btn-lg'%>
-<%= link_to 'List of Kinds', controller: 'kinds'%>
+<%= link_to 'List of Autors', autors_path, class: 'btn btn-default'%>
+<%= link_to 'List of Kinds', kinds_path, class: 'btn btn-default'%>
 <%= link_to 'New Book', new_book_path, class: 'btn btn-default' if can? :create, User%>
+
 
 
 

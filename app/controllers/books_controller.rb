@@ -8,7 +8,7 @@ class BooksController < ApplicationController
   	if params[:search]
   		@books = Book.search(params[:search])
   	else
-    	@books = Book.all
+    		@books = Book.all
     	end
   end
 

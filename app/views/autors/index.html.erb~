@@ -26,8 +26,8 @@
         <td><%= autor.first_name %></td>
         <td><%= autor.nationality %></td>
         <td><%= link_to 'Show', autor, class: 'btn btn-default' %></td>
-        <td><%= link_to 'Edit', edit_autor_path(autor), class: 'btn btn-default' if can? :update, User %></td>
-        <td><%= link_to 'Destroy', autor, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default' if can? :destroy, User%></td>
+        <td><%= link_to 'Edit', edit_autor_path(autor), class: 'btn btn-info' if can? :update, User %></td>
+        <td><%= link_to 'Destroy', autor, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' if can? :destroy, User%></td>
       </tr>
     <% end %>
   </tbody>
