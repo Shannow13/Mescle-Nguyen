@@ -4,6 +4,7 @@ class BooksController < ApplicationController
 
   # GET /books
   # GET /books.json
+  #Fonction pour la search bar qui n'apparait pas
   def index
   	if params[:search]
   		@books = Book.search(params[:search])

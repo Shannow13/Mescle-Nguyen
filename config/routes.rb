@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :books
 
   resources :kinds
-  
+  #On oblige le visiteur à passer par une identification pour accéder au contenu
   devise_for :users
   root :to => 'books#index'
 
