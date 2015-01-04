@@ -1,4 +1,7 @@
-<h2>Log in</h2>
+<h1>Bienvenue sur le site de la biliothèque de Cnhafon</h1>
+
+
+<h2>Afin de voir les différents livres que nous proposons veuillez vous connecter ou créer un compte</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">

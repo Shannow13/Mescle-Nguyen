@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   
-  
+  #On définit le fait qu'un utilisateur puisse être administrateur
   def admin?
   	admin
   end

@@ -1,4 +1,4 @@
-<h1>Listing autors</h1>
+<h1>Les auteurs disponibles</h1>
 
 <form>
       <% form_tag(books_path, :method => "get", id: "search-form") do %>

@@ -25,24 +25,24 @@
         <td><%= autor.name %></td>
         <td><%= autor.first_name %></td>
         <td><%= autor.nationality %></td>
-        <td><%= link_to 'Show', autor, class: 'btn btn-default' %></td>
-        <td><%= link_to 'Edit', edit_autor_path(autor), class: 'btn btn-info' if can? :update, User %></td>
-        <td><%= link_to 'Destroy', autor, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' if can? :destroy, User%></td>
+        <td><%= link_to 'Détails', autor, class: 'btn btn-default' %></td>
+        <td><%= link_to 'Editer', edit_autor_path(autor), class: 'btn btn-info' if can? :update, User %></td>
+        <td><%= link_to 'Supprimer', autor, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' if can? :destroy, User%></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-<%= link_to 'List of kinds', kinds_path, class: 'btn btn-default' %>
-<%= link_to 'List of Books', books_path, class: 'btn btn-default' %>
-<%= link_to 'New Autor', new_autor_path, class: 'btn btn-default' if can? :create, User%>
+<%= link_to 'Nos genres littéraires', kinds_path, class: 'btn btn-default' %>
+<%= link_to 'Nos livres', books_path, class: 'btn btn-default' %>
+<%= link_to 'Nouvel auteur', new_autor_path, class: 'btn btn-default' if can? :create, User%>
 <% if user_signed_in? %>
   <li>
-  <%= link_to('Logout', destroy_user_session_path, class: 'btn btn-default', :method => :delete) %> 
+  <%= link_to('Déconnexion', destroy_user_session_path, class: 'btn btn-default', :method => :delete) %> 
   </li>
 <% else %>
   <li>
-  <%= link_to('Login', new_user_session_path)  %>  
+  <%= link_to('Connexion', new_user_session_path)  %>  
   </li>   
   <% end %>
