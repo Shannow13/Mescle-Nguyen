@@ -15,5 +15,5 @@
   <%= @autor.nationality %>
 </p>
 
-<%= link_to 'Edit', edit_autor_path(@autor), class: 'btn btn-info' if can? :update, User %> |
+<%= link_to 'Edit', edit_autor_path(@autor), class: 'btn btn-info' if can? :update, User %> 
 <%= link_to 'Back', autors_path, class: 'btn btn-default' %>

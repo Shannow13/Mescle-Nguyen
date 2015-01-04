@@ -10,5 +10,5 @@
   <%= @kind.cote %>
 </p>
 
-<%= link_to 'Edit', edit_kind_path(@kind) %> |
+<%= link_to 'Edit', edit_kind_path(@kind), class: 'btn btn-info' if can? :update, User %> |
 <%= link_to 'Back', kinds_path, class: 'btn btn-default' %>
