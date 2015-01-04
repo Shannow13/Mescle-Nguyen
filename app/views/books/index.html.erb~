@@ -29,7 +29,7 @@
         <td><%= book.cote %></td>
         <td><%= link_to 'Détails', book ,class: 'btn btn-default' %></td>
         <td><%= link_to 'Editer', edit_book_path(book), class: 'btn btn-info' if can? :update, User%></td>
-        <td><%= link_to 'SUpprimer', book, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' if can? :destroy, User%></td>
+        <td><%= link_to 'Supprimer', book, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' if can? :destroy, User%></td>
       </tr>
     <% end %>
 

@@ -5,7 +5,11 @@ class KindsController < ApplicationController
   # GET /kinds
   # GET /kinds.json
   def index
-    @kinds = Kind.all
+  	if params[:search]
+  		@kinds = Kind.search(params[:search])
+  	else
+    		@kinds = Kind.all
+    	end
   end
 
   # GET /kinds/1

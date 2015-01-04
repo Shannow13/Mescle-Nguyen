@@ -1,13 +1,9 @@
 <h1>Les auteurs disponibles</h1>
 
-<form>
-      <% form_tag(books_path, :method => "get", id: "search-form") do %>
-	
-	 	
-	<%= text_field_tag :search, params[:search], placeholder: "Search books" %>
-	<%= submit_tag "Search"%>
+<%= form_tag(autors_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search kinds" %>
+  <%= submit_tag "Search", :name => nil %>
 <% end %>
-</form>
 
 <table class="table">
   <thead>

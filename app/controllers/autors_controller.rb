@@ -5,7 +5,12 @@ class AutorsController < ApplicationController
   # GET /autors
   # GET /autors.json
   def index
-    @autors = Autor.all
+  	if params[:search]
+  		@autors = Autor.search(params[:search])
+  	else
+    		@autors = Autor.all
+    	end
+    
   end
 
   # GET /autors/1

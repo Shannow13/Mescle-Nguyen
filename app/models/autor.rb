@@ -1,7 +1,10 @@
 class Autor < ActiveRecord::Base
 	has_many :book
 	validate :blank
-
+	#Method for searching in the database
+	def self.search(query)
+		where("name like ?", "%#{query}%")
+	end
 	def blank
 		if name.empty?
 		errors.add(:name, 'If the autor does not have a name please put Anonymous')
