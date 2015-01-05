@@ -17,3 +17,5 @@ Enfin il faut migrate la base avec rake db:migrate.
 Maintentant lorsqu'on lance le serveur avec rails s et qu'on se connecte sur localhost:3000 la page de connexion s'affiche et la navigation peut commencer
 
 Lorsqu'on arrive sur la page de connexion on peut soit créer un compte qui n'aura pas les privilèges administrateur, soit utiliser le compte admin@chnafon.com qui a pour mot de passe Chnafon!
+Ce compte administrateur ne marche que sur heroku.
+Pour l'appli en local il faut s'attribuer les droits via la rails console. Pour cela il faut faire taper rails console et faire user=User.find(nombre) puis user.update(:admin, true)
