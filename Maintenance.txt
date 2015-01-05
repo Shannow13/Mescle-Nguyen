@@ -1,0 +1,17 @@
+Bonjour !
+
+Le site est disponible et avec des données sur http://desolate-shore-5650.herokuapp.com .
+
+Pour que le site marche en local il faut avoir installé postgresql ainsi que le package postgresql-server-dev-all, puis bundle install.
+
+Ensuite il faut que l'utilisateur de l'ordinateur soit déclaré comme utilisateur de Postgresql, qu'une base (même vide) existe et que cet utilisateur ait les privilèges de connexion sur cette base. Pour cela il faut exécuter dans l'ordre :
+  -sudo -i -u postgres
+  -psql
+  -CREATE USER "nom_d'utilisateur"
+  -ALTER ROLE "nom_d'utilisateur" WITH CREATEDB
+  -CREATE DATABASE "nom_de_la_base" OWNER "nom_d'utilisateur"
+  -GRANT CONNECT ON DATABASE "nom_de_la_base" TO "nom_d'utilisateur"
+  -\q
+  -exit
+Enfin il faut migrate la base avec rake db:migrate.
+Maintentant lorsqu'on lance le serveur avec rails s et qu'on se connecte sur localhost:3000 la page de connexion s'affiche et la navigation peut commencer
