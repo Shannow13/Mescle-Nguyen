@@ -15,3 +15,5 @@ Ensuite il faut que l'utilisateur de l'ordinateur soit déclaré comme utilisate
   -exit
 Enfin il faut migrate la base avec rake db:migrate.
 Maintentant lorsqu'on lance le serveur avec rails s et qu'on se connecte sur localhost:3000 la page de connexion s'affiche et la navigation peut commencer
+
+Lorsqu'on arrive sur la page de connexion on peut soit créer un compte qui n'aura pas les privilèges administrateur, soit utiliser le compte admin@chnafon.com qui a pour mot de passe Chnafon!
